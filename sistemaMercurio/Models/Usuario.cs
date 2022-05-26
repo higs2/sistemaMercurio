@@ -24,20 +24,21 @@ namespace sistemaMercurio.Models
         public string cargo { get; set; }
 
 
-        public Usuario(
-                       string _nome, 
-                       string _email,
-                       string _senha,
-                       string _funcao,
-                       string _cpf,
-                       string _data_nascimento,
-                       string _celular,
-                       string _cep,
-                       string _logradouro,
-                       int _numero,
-                       string _uf,
-                       string _bairro,
-                       string _cargo
+        public Usuario
+            (
+            string _nome, 
+            string _email,
+            string _senha,
+            string _funcao,
+            string _cpf,
+            string _data_nascimento,
+            string _celular,
+            string _cep,
+            string _logradouro,
+            int _numero,
+            string _uf,
+            string _bairro,
+            string _cargo
             )
         {
             nome = _nome;
