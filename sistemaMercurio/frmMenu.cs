@@ -12,9 +12,11 @@ namespace sistemaMercurio
 {
     public partial class frmMenu : Form
     {
-        public frmMenu()
+        public frmMenu(string nome)
         {
             InitializeComponent();
+            usuarioLogado.Text = nome;
+
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -52,6 +54,11 @@ namespace sistemaMercurio
         {
             frmCalculadoraTeste calculadoraTeste = new frmCalculadoraTeste();
             calculadoraTeste.ShowDialog();
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

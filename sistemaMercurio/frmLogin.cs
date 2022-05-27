@@ -30,10 +30,10 @@ namespace sistemaMercurio
 
             if (result.Rows.Count > 0)
             {
-                MessageBox.Show("LOGADO COM SUCESSO","LOGADO",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                this.Hide();    
-                frmMenu menu = new frmMenu();
+                MessageBox.Show("LOGADO COM SUCESSO","LOGADO",MessageBoxButtons.OK,MessageBoxIcon.Information);                   
+                frmMenu menu = new frmMenu( result.Rows[0]["nome"].ToString());
                 menu.Show();
+                this.Hide();
             }
             else
             {
@@ -57,22 +57,25 @@ namespace sistemaMercurio
             
             if (e.KeyCode == Keys.Enter)
             {
-                
-                string usuario, senha;
-                usuario = txtUsuario.Text;
-                senha = txtSenha.Text;
+                LoginController login = new LoginController();
+                Usuario user = new Usuario();
+                user.email = txtUsuario.Text;
+                user.senha = txtSenha.Text;
 
-                if ((usuario == "admin") || (usuario == "") && (senha == ""))
+                DataTable result = login.fazerLogin(user);
+
+                if (result.Rows.Count > 0)
                 {
                     MessageBox.Show("LOGADO COM SUCESSO", "LOGADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    frmMenu menu = new frmMenu();
+                    frmMenu menu = new frmMenu(result.Rows[0]["nome"].ToString());
                     menu.Show();
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("USUARIO OU SENHA INCORRETO", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+
             }
         }
 
