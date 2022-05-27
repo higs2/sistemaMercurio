@@ -1,4 +1,5 @@
-﻿using sistemaMercurio.Models;
+﻿using sistemaMercurio.Controllers;
+using sistemaMercurio.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,11 +21,14 @@ namespace sistemaMercurio
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            string usuario, senha;
-            usuario = txtUsuario.Text;
-            senha = txtSenha.Text;
-            
-            if ((usuario == "admin")|| (usuario == "") && (senha == ""))
+            LoginController login = new LoginController();
+            Usuario user = new Usuario();
+            user.email = txtUsuario.Text;
+            user.senha = txtSenha.Text;
+
+            DataTable result = login.fazerLogin(user);
+
+            if (result.Rows.Count > 0)
             {
                 MessageBox.Show("LOGADO COM SUCESSO","LOGADO",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 this.Hide();    
@@ -72,11 +76,6 @@ namespace sistemaMercurio
             }
         }
 
-        private void btnConectar_Click(object sender, EventArgs e)
-        {
-            Conexao.Conectar();
-          
-            
-        }
+       
     }
 }

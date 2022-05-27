@@ -32,7 +32,6 @@ namespace sistemaMercurio
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
-            this.btnConectar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtUsuario
@@ -72,23 +71,6 @@ namespace sistemaMercurio
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
-            // btnConectar
-            // 
-            this.btnConectar.BackColor = System.Drawing.Color.OliveDrab;
-            this.btnConectar.FlatAppearance.BorderSize = 0;
-            this.btnConectar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LimeGreen;
-            this.btnConectar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkGreen;
-            this.btnConectar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConectar.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConectar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnConectar.Location = new System.Drawing.Point(248, 494);
-            this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(119, 46);
-            this.btnConectar.TabIndex = 3;
-            this.btnConectar.Text = "Conectar";
-            this.btnConectar.UseVisualStyleBackColor = false;
-            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -96,7 +78,6 @@ namespace sistemaMercurio
             this.BackgroundImage = global::sistemaMercurio.Properties.Resources.fundoLogin;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(628, 653);
-            this.Controls.Add(this.btnConectar);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
@@ -117,7 +98,6 @@ namespace sistemaMercurio
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Button btnConectar;
     }
 }
 

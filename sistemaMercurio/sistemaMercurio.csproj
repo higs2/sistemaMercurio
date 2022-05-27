@@ -54,6 +54,8 @@
       <DependentUpon>CalculadoraTeste.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexao.cs" />
+    <Compile Include="Controllers\datatable.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,8 +130,6 @@
   <ItemGroup>
     <None Include="Resources\geradorTopo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

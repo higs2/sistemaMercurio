@@ -11,19 +11,24 @@ namespace sistemaMercurio
     internal class Conexao
     {
         private static MySqlConnection conexao;
-        public static void Conectar()
+        public static MySqlConnection Conectar()
         {
+            string server = "localhost";
+            string port = "3306";
+            string username = "root";
+            string password = "";
+            string database = "dbmercurio";
+
             try
             {
-                conexao = new MySqlConnection("server=localhost;port=3306;uid=root;password=;database=dbmercurio");
-                conexao.Open();
-                MessageBox.Show("Banco conectado!","Conectado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
+                conexao = new MySqlConnection($"server={server};port={port};uid={username};password={password};database={database}");
+                return conexao;
 
             }
-            catch ( MySqlException erro)
-            {
-                MessageBox.Show("Error na conexão: " + erro.Message, "ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);                
-               
+            catch ( MySqlException )
+            {                                             
+               return null;
             }
             
            

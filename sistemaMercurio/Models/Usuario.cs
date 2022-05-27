@@ -23,6 +23,10 @@ namespace sistemaMercurio.Models
         public string bairro { get; set; }
         public string cargo { get; set; }
 
+        public Usuario()
+        {
+
+        }
 
         public Usuario
             (
