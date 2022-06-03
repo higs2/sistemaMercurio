@@ -1,4 +1,6 @@
-﻿using System;
+﻿using sistemaMercurio.Controllers;
+using sistemaMercurio.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -66,11 +68,44 @@ namespace sistemaMercurio
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            verificarSenha();
-            MessageBox.Show("Usuário " + txtNome.Text + "\nCadastrado com sucesso" +
-                "\nInformações de Login" +
-                "\nLogin: " + txtEmail.Text +
-                "\nSenha:" + txtSenha.Text, "Cadastrado",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            Usuario user = new Usuario
+            (
+                    txtNome.Text,
+                    txtEmail.Text,
+                    txtSenha.Text,
+                    txtFuncao.Text,
+                    txtCPF.Text,
+                    txtNascimento.Text,
+                    txtCel.Text,
+                    txtCep.Text,
+                    txtEndereco.Text,
+                    Convert.ToInt32(txtNumero.Text),
+                    txtUf.Text,
+                    txtBairro.Text,
+                    txtCargo.Text
+            );
+            UsuarioController usuarioController = new UsuarioController();
+            bool verifica = usuarioController.salvarUsuario(user);
+
+            if (verifica)
+            {
+                MessageBox.Show("Usuário cadastrado com sucesso","Cadastro",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                
+                if (MessageBox.Show("Deseja Continuar cadastrando","Cadastro",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    limparCampos();
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Falha ao cadastrar o usuário", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
         }
 
         private void txtConfirmarSenha_Leave(object sender, EventArgs e)
@@ -78,6 +113,9 @@ namespace sistemaMercurio
             verificarSenha();
         }
 
-       
+        private void frmUsuario_Load(object sender, EventArgs e)
+        {
+            lblErro.Text = "";
+        }
     }
 }

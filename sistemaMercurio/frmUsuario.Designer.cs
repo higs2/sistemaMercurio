@@ -128,17 +128,17 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = ",";
-       
             // 
             // lblErro
             // 
             this.lblErro.AutoSize = true;
             this.lblErro.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErro.ForeColor = System.Drawing.Color.Red;
-            this.lblErro.Location = new System.Drawing.Point(114, 90);
+            this.lblErro.Location = new System.Drawing.Point(78, 90);
             this.lblErro.Name = "lblErro";
-            this.lblErro.Size = new System.Drawing.Size(0, 17);
+            this.lblErro.Size = new System.Drawing.Size(38, 17);
             this.lblErro.TabIndex = 33;
+            this.lblErro.Text = "error";
             // 
             // txtNascimento
             // 
@@ -298,7 +298,7 @@
             // 
             this.txtFuncao.FormattingEnabled = true;
             this.txtFuncao.Items.AddRange(new object[] {
-            "Administrado",
+            "Administrador",
             "Usuário 1",
             "Usuário 2"});
             this.txtFuncao.Location = new System.Drawing.Point(533, 110);
@@ -462,6 +462,7 @@
             this.Name = "frmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema Mercúrio | Usuário";
+            this.Load += new System.EventHandler(this.frmUsuario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

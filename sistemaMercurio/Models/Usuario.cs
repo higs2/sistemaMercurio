@@ -17,7 +17,7 @@ namespace sistemaMercurio.Models
         public string data_nascimento { get; set; }
         public string celular { get; set; }
         public string cep { get; set; }
-        public string logradouro { get; set; }
+        public string endereco { get; set; }
         public int numero { get; set; }
         public string uf { get; set; }
         public string bairro { get; set; }
@@ -38,7 +38,7 @@ namespace sistemaMercurio.Models
             string _data_nascimento,
             string _celular,
             string _cep,
-            string _logradouro,
+            string _endereco,
             int _numero,
             string _uf,
             string _bairro,
@@ -53,7 +53,7 @@ namespace sistemaMercurio.Models
             data_nascimento = _data_nascimento; 
             celular = _celular; 
             cep = _cep; 
-            logradouro = _logradouro;   
+            endereco = _endereco;   
             uf = _uf;   
             bairro = _bairro;   
             cargo = _cargo;
