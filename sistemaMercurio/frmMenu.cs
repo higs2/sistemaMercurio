@@ -60,5 +60,11 @@ namespace sistemaMercurio
         {
             
         }
+
+        private void funcionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmFuncionario funcionario = new frmFuncionario();
+            funcionario.ShowDialog();
+        }
     }
 }

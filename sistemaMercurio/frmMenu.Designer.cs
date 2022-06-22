@@ -43,6 +43,7 @@ namespace sistemaMercurio
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.usuarioLogado = new System.Windows.Forms.ToolStripStatusLabel();
+            this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,59 +67,60 @@ namespace sistemaMercurio
             this.geradorToolStripMenuItem,
             this.calculadoraTesteeeToolStripMenuItem});
             this.sistemasToolStripMenuItem.Name = "sistemasToolStripMenuItem";
-            this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.sistemasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sistemasToolStripMenuItem.Text = "Sistemas";
             // 
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             // 
             // browserToolStripMenuItem
             // 
             this.browserToolStripMenuItem.Name = "browserToolStripMenuItem";
-            this.browserToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.browserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.browserToolStripMenuItem.Text = "Browser";
             // 
             // geradorToolStripMenuItem
             // 
             this.geradorToolStripMenuItem.Name = "geradorToolStripMenuItem";
-            this.geradorToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.geradorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.geradorToolStripMenuItem.Text = "Gerador da Mega";
             this.geradorToolStripMenuItem.Click += new System.EventHandler(this.geradorToolStripMenuItem_Click);
             // 
             // calculadoraTesteeeToolStripMenuItem
             // 
             this.calculadoraTesteeeToolStripMenuItem.Name = "calculadoraTesteeeToolStripMenuItem";
-            this.calculadoraTesteeeToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.calculadoraTesteeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.calculadoraTesteeeToolStripMenuItem.Text = "Calculadora Teste";
             this.calculadoraTesteeeToolStripMenuItem.Click += new System.EventHandler(this.calculadoraTesteeeToolStripMenuItem_Click);
             // 
             // cadastrToolStripMenuItem
             // 
             this.cadastrToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuárioToolStripMenuItem});
+            this.usuárioToolStripMenuItem,
+            this.funcionárioToolStripMenuItem});
             this.cadastrToolStripMenuItem.Name = "cadastrToolStripMenuItem";
-            this.cadastrToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.cadastrToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrToolStripMenuItem.Text = "Cadastro";
             // 
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(118, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -153,6 +155,13 @@ namespace sistemaMercurio
             // 
             this.usuarioLogado.Name = "usuarioLogado";
             this.usuarioLogado.Size = new System.Drawing.Size(0, 17);
+            // 
+            // funcionárioToolStripMenuItem
+            // 
+            this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionárioToolStripMenuItem.Text = "Funcionário";
+            this.funcionárioToolStripMenuItem.Click += new System.EventHandler(this.funcionárioToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -197,5 +206,6 @@ namespace sistemaMercurio
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel usuarioLogado;
+        private System.Windows.Forms.ToolStripMenuItem funcionárioToolStripMenuItem;
     }
 }

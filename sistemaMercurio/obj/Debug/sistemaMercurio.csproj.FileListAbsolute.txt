@@ -104,3 +104,4 @@ C:\Users\higor\Desktop\sistemaMercurio\sistemaMercurio\bin\Debug\K4os.Hash.xxHas
 C:\Users\higor\Desktop\sistemaMercurio\sistemaMercurio\bin\Debug\MySql.Data.xml
 C:\Users\higor\Desktop\sistemaMercurio\sistemaMercurio\obj\Debug\sistemaMercurio.exe.config
 C:\Users\higor\Desktop\sistemaMercurio\sistemaMercurio\obj\Debug\sistemaMercurio.csproj.CopyComplete
+C:\Users\higor\Desktop\sistemaMercurio\sistemaMercurio\obj\Debug\sistemaMercurio.frmFuncionario.resources
