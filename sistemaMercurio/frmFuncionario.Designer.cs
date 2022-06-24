@@ -60,10 +60,10 @@ namespace sistemaMercurio
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(610, 577);
+            this.btnCancelar.Location = new System.Drawing.Point(610, 433);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(158, 45);
-            this.btnCancelar.TabIndex = 9;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -77,10 +77,10 @@ namespace sistemaMercurio
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpar.Location = new System.Drawing.Point(200, 577);
+            this.btnLimpar.Location = new System.Drawing.Point(200, 433);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(158, 45);
-            this.btnLimpar.TabIndex = 8;
+            this.btnLimpar.TabIndex = 7;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -94,10 +94,10 @@ namespace sistemaMercurio
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(13, 577);
+            this.btnCadastrar.Location = new System.Drawing.Point(13, 433);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(158, 45);
-            this.btnCadastrar.TabIndex = 7;
+            this.btnCadastrar.TabIndex = 6;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -118,12 +118,11 @@ namespace sistemaMercurio
             this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
-            this.groupBox2.Location = new System.Drawing.Point(13, 182);
+            this.groupBox2.Location = new System.Drawing.Point(13, 134);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 356);
+            this.groupBox2.Size = new System.Drawing.Size(776, 266);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = ",";
             // 
             // txtStatus
             // 
@@ -131,15 +130,15 @@ namespace sistemaMercurio
             this.txtStatus.Items.AddRange(new object[] {
             "Ativo",
             "Inativo"});
-            this.txtStatus.Location = new System.Drawing.Point(412, 245);
+            this.txtStatus.Location = new System.Drawing.Point(32, 212);
             this.txtStatus.Name = "txtStatus";
-            this.txtStatus.Size = new System.Drawing.Size(343, 29);
-            this.txtStatus.TabIndex = 12;
+            this.txtStatus.Size = new System.Drawing.Size(201, 29);
+            this.txtStatus.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(408, 221);
+            this.label5.Location = new System.Drawing.Point(29, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 21);
             this.label5.TabIndex = 11;
@@ -148,7 +147,7 @@ namespace sistemaMercurio
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(29, 221);
+            this.label7.Location = new System.Drawing.Point(503, 114);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(58, 21);
             this.label7.TabIndex = 9;
@@ -165,15 +164,15 @@ namespace sistemaMercurio
             "Marketing",
             "Jurídico",
             "Operacional"});
-            this.txtDepartamento.Location = new System.Drawing.Point(33, 167);
+            this.txtDepartamento.Location = new System.Drawing.Point(33, 138);
             this.txtDepartamento.Name = "txtDepartamento";
-            this.txtDepartamento.Size = new System.Drawing.Size(331, 29);
-            this.txtDepartamento.TabIndex = 8;
+            this.txtDepartamento.Size = new System.Drawing.Size(200, 29);
+            this.txtDepartamento.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(407, 143);
+            this.label6.Location = new System.Drawing.Point(264, 114);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 21);
             this.label6.TabIndex = 7;
@@ -182,15 +181,15 @@ namespace sistemaMercurio
             // txtCargo
             // 
             this.txtCargo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.Location = new System.Drawing.Point(412, 167);
+            this.txtCargo.Location = new System.Drawing.Point(269, 138);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(343, 29);
-            this.txtCargo.TabIndex = 6;
+            this.txtCargo.Size = new System.Drawing.Size(200, 29);
+            this.txtCargo.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 143);
+            this.label4.Location = new System.Drawing.Point(29, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 21);
             this.label4.TabIndex = 5;
@@ -199,15 +198,15 @@ namespace sistemaMercurio
             // txtSalario
             // 
             this.txtSalario.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSalario.Location = new System.Drawing.Point(33, 245);
+            this.txtSalario.Location = new System.Drawing.Point(507, 138);
             this.txtSalario.Name = "txtSalario";
-            this.txtSalario.Size = new System.Drawing.Size(331, 29);
+            this.txtSalario.Size = new System.Drawing.Size(248, 29);
             this.txtSalario.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(408, 64);
+            this.label3.Location = new System.Drawing.Point(426, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 21);
             this.label3.TabIndex = 3;
@@ -216,15 +215,15 @@ namespace sistemaMercurio
             // txtMatricula
             // 
             this.txtMatricula.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatricula.Location = new System.Drawing.Point(412, 88);
+            this.txtMatricula.Location = new System.Drawing.Point(430, 59);
             this.txtMatricula.Name = "txtMatricula";
-            this.txtMatricula.Size = new System.Drawing.Size(343, 29);
-            this.txtMatricula.TabIndex = 2;
+            this.txtMatricula.Size = new System.Drawing.Size(325, 29);
+            this.txtMatricula.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 64);
+            this.label2.Location = new System.Drawing.Point(29, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 21);
             this.label2.TabIndex = 1;
@@ -233,9 +232,9 @@ namespace sistemaMercurio
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(33, 88);
+            this.txtNome.Location = new System.Drawing.Point(33, 59);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(331, 29);
+            this.txtNome.Size = new System.Drawing.Size(363, 29);
             this.txtNome.TabIndex = 0;
             // 
             // label1
@@ -265,14 +264,17 @@ namespace sistemaMercurio
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(800, 662);
+            this.ClientSize = new System.Drawing.Size(800, 498);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmFuncionario";
-            this.Text = "frmFuncionario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sistema Mercúrio | Funcionário";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);

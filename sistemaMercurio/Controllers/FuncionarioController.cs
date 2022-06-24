@@ -2,6 +2,7 @@
 using sistemaMercurio.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,23 +16,24 @@ namespace sistemaMercurio.Controllers
         public FuncionarioController()
         {
             conexao = Conexao.Conectar();
-            conexao.Open();
+            
 
         }
 
-        public bool salvarFuncionario(Funcionario user)
+        public bool salvarFuncionario(Funcionario func)
         {
             try
             {
+                conexao.Open();
                 MySqlCommand cmd = new MySqlCommand("INSERT INTO funcionario (nome,matricula,departamento,cargo,salario,status) " +
                                                                     "VALUES (@nome,@matricula,@departamento,@cargo,@salario,@status)", conexao);
 
-                cmd.Parameters.AddWithValue("@nome", user.nome);
-                cmd.Parameters.AddWithValue("@matricula", user.matricula);
-                cmd.Parameters.AddWithValue("@departamento",user.departamento);
-                cmd.Parameters.AddWithValue("@cargo", user.cargo);
-                cmd.Parameters.AddWithValue("@salario", user.salario);
-                cmd.Parameters.AddWithValue("@status", user.status);
+                cmd.Parameters.AddWithValue("@nome", func.nome);
+                cmd.Parameters.AddWithValue("@matricula", func.matricula);
+                cmd.Parameters.AddWithValue("@departamento",func.departamento);
+                cmd.Parameters.AddWithValue("@cargo", func.cargo);
+                cmd.Parameters.AddWithValue("@salario", func.salario);
+                cmd.Parameters.AddWithValue("@status", func.status);
                 cmd.ExecuteNonQuery();
 
                 return true;
@@ -41,6 +43,49 @@ namespace sistemaMercurio.Controllers
                 return false;
 
 
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public DataTable exibirFuncionarios()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT id_funcionario,matricula,nome,departamento,cargo,salario,status FROM funcionario", conexao);
+                MySqlDataReader reader = cmd.ExecuteReader();
+                dt.Load(reader);
+                return dt;
+            }
+            catch (MySqlException)
+            {
+
+                return dt;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
+
+        public bool deletarFuncinario(Funcionario func)
+        {
+            try
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM funcionario WHERE id_funcionario = @id_funcionario", conexao);
+                cmd.Parameters.AddWithValue("@id_funcionario", func.id_funcionario);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception)
+            {
+
+                return false;
             }
             finally
             {
