@@ -16,6 +16,7 @@ namespace sistemaMercurio
     {
 
         FuncionarioController funcinarioController = new FuncionarioController();
+
         public frmConsultaFuncionario()
         {
             InitializeComponent();
@@ -60,5 +61,7 @@ namespace sistemaMercurio
                 }
             }
         }
+
+       
     }
 }

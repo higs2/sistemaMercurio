@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sistemaMercurio.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace sistemaMercurio
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
-            Application.Run(new frmConsultaFuncionario());
+            Application.Run(new frmConsultarUsuario());
         }
     }
 }
