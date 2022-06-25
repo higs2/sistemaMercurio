@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 24-Jun-2022 às 04:01
+-- Tempo de geração: 25-Jun-2022 às 19:17
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 7.3.30
 
@@ -64,9 +64,9 @@ CREATE TABLE `usuario` (
   `cpf` varchar(15) DEFAULT NULL,
   `celular` varchar(15) DEFAULT NULL,
   `cep` varchar(10) DEFAULT NULL,
-  `logradouro` varchar(100) DEFAULT NULL,
+  `endereco` varchar(100) DEFAULT NULL,
   `numero` int(11) DEFAULT NULL,
-  `uf` char(2) DEFAULT NULL,
+  `uf` varchar(20) DEFAULT NULL,
   `bairro` varchar(45) DEFAULT NULL,
   `cargo` varchar(45) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -75,8 +75,9 @@ CREATE TABLE `usuario` (
 -- Extraindo dados da tabela `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `senha`, `funcao`, `data_nascimento`, `cpf`, `celular`, `cep`, `logradouro`, `numero`, `uf`, `bairro`, `cargo`) VALUES
-(1, 'Higor', 'admin@admin.com', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `usuario` (`id_usuario`, `nome`, `email`, `senha`, `funcao`, `data_nascimento`, `cpf`, `celular`, `cep`, `endereco`, `numero`, `uf`, `bairro`, `cargo`) VALUES
+(1, 'Higor', 'admin@admin.com', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(3, 'Higor', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -102,13 +103,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de tabela `funcionario`
 --
 ALTER TABLE `funcionario`
-  MODIFY `id_funcionario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_funcionario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
