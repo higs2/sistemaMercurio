@@ -53,11 +53,12 @@ namespace sistemaMercurio.Models
             data_nascimento = _data_nascimento; 
             celular = _celular; 
             cep = _cep; 
-            endereco = _endereco;   
+            endereco = _endereco;
+            numero = _numero;
             uf = _uf;   
             bairro = _bairro;   
             cargo = _cargo;
-            numero = _numero;
+            
         }
 
     }

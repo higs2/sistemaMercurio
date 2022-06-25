@@ -1,4 +1,5 @@
-﻿using System;
+﻿using sistemaMercurio.Controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,18 @@ namespace sistemaMercurio
         {
             frmFuncionario funcionario = new frmFuncionario();
             funcionario.ShowDialog();
+        }
+
+        private void funcionárioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultaFuncionario consultaFuncionario = new frmConsultaFuncionario();
+            consultaFuncionario.ShowDialog();
+        }
+
+        private void usuárioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmConsultarUsuario consultaUsuario = new frmConsultarUsuario();
+            consultaUsuario.ShowDialog();
         }
     }
 }

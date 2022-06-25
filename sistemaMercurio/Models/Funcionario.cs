@@ -10,7 +10,7 @@ namespace sistemaMercurio.Models
     {
         public int id_funcionario { get; set; }
         public string nome { get; set; }
-        public int matricula { get; set; }
+        public string matricula { get; set; }
         public string departamento { get; set; }
         public string cargo { get; set; }
         public double salario { get; set; }
@@ -25,7 +25,7 @@ namespace sistemaMercurio.Models
         public Funcionario
             (
             string _nome,
-            int _matricula,
+            string _matricula,
             string _departamento,
             string _cargo,
             double _salario,

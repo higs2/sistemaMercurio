@@ -35,7 +35,7 @@ namespace sistemaMercurio
             Funcionario user = new Funcionario
             (
                     txtNome.Text,
-                    Convert.ToInt32(txtMatricula.Text),
+                    txtMatricula.Text,
                     txtDepartamento.Text,                    
                     txtCargo.Text,
                     Convert.ToDouble(txtSalario.Text),

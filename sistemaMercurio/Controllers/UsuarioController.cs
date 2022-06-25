@@ -63,7 +63,7 @@ namespace sistemaMercurio.Controllers
             try
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT id_usuario,email,funcao,data_nascimento,cpf,celular,cep,logradouro,numero,numero,uf,bairro,cargo FROM usuario", conexao);
+                MySqlCommand cmd = new MySqlCommand("SELECT id_usuario,email,funcao,data_nascimento,cpf,celular,cep,endereco,numero,numero,uf,bairro,cargo FROM usuario", conexao);
                 MySqlDataReader reader = cmd.ExecuteReader();
                 dt.Load(reader);
                 return dt;
