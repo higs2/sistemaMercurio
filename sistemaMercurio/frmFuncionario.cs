@@ -14,9 +14,32 @@ namespace sistemaMercurio
 {
     public partial class frmFuncionario : Form
     {
+
+        Funcionario funcionario = new Funcionario();
         public frmFuncionario()
         {
             InitializeComponent();
+        }
+
+        public frmFuncionario(Funcionario func)
+        {
+            InitializeComponent();
+            funcionario = func;
+            carregarEditar();
+        }
+
+        public void carregarEditar()
+        {
+            btnCadastrar.Visible = false;
+            btnLimpar.Visible = false;
+            btnSalvar.Visible = true;
+
+            txtNome.Text = funcionario.nome;
+            txtMatricula.Text = funcionario.matricula;
+            txtDepartamento.Text = funcionario.departamento;
+            txtCargo.Text = funcionario.cargo;
+            txtSalario.Text = funcionario.salario.ToString();
+            txtStatus.Text = funcionario.status;
         }
 
         private void limparCampos()
@@ -70,11 +93,33 @@ namespace sistemaMercurio
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja cancelar o cadastro? ", "Cancelar", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
-            {
-                this.Dispose();
+           
+            this.Close();
 
+            
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            funcionario.nome = txtNome.Text;
+            funcionario.matricula = txtMatricula.Text;
+            funcionario.departamento = txtDepartamento.Text;
+            funcionario.cargo = txtCargo.Text;
+            funcionario.salario = Convert.ToDouble(txtSalario.Text);
+            funcionario.status = txtSalario.Text;
+
+            FuncionarioController funcionarioController = new FuncionarioController();
+            bool resultado = funcionarioController.editarFuncionario(funcionario);
+
+            if (resultado)
+            {
+                MessageBox.Show("Funcionado atualizado com sucesso", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("Falha ao atualizar o funcionário", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
     }
 }

@@ -24,25 +24,27 @@ namespace sistemaMercurio.Controllers
         {
             dgvUsuario.DataSource = usuarioController.exibirUsuarios();
             dgvUsuario.Columns[0].Width = 50;
-            dgvUsuario.Columns[1].Width = 100;
-            dgvUsuario.Columns[2].Width = 200;
-            dgvUsuario.Columns[3].Width = 120;
-            dgvUsuario.Columns[4].Width = 120;
-            dgvUsuario.Columns[5].Width = 80;
+            dgvUsuario.Columns[1].Width = 130;
+            dgvUsuario.Columns[2].Width = 150;
+            dgvUsuario.Columns[3].Width = 80;
+            dgvUsuario.Columns[4].Width = 100;
+            dgvUsuario.Columns[5].Width = 95;
             dgvUsuario.Columns[6].Width = 80;
             dgvUsuario.Columns[7].Width = 80;
-            dgvUsuario.Columns[8].Width = 80;
-            dgvUsuario.Columns[9].Width = 80;
-            dgvUsuario.Columns[10].Width = 80;
-            dgvUsuario.Columns[11].Width = 80;
-            dgvUsuario.Columns[12].Width = 80;
+            dgvUsuario.Columns[8].Width = 200;
+            dgvUsuario.Columns[9].Width = 100;
+            dgvUsuario.Columns[10].Width = 30;
+            dgvUsuario.Columns[11].Width = 100;
+            dgvUsuario.Columns[12].Width = 100;
 
+
+          
             dgvUsuario.Columns[0].HeaderText = "ID";
-            dgvUsuario.Columns[1].HeaderText = "Email";
-            dgvUsuario.Columns[2].HeaderText = "Nome";
+            dgvUsuario.Columns[1].HeaderText = "Nome";
+            dgvUsuario.Columns[2].HeaderText = "Email";
             dgvUsuario.Columns[3].HeaderText = "Função";
-            dgvUsuario.Columns[4].HeaderText = "Data Nascimento";
-            dgvUsuario.Columns[5].HeaderText = "CPF";
+            dgvUsuario.Columns[4].HeaderText = "CPF";
+            dgvUsuario.Columns[5].HeaderText = "Data de Nascimento";
             dgvUsuario.Columns[6].HeaderText = "Celular";
             dgvUsuario.Columns[7].HeaderText = "CEP";
             dgvUsuario.Columns[8].HeaderText = "Endereço";

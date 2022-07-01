@@ -138,3 +138,6 @@ C:\Program Files (x86)\PROJETOS\sistemaMercurio\sistemaMercurio\obj\Debug\sistem
 C:\Users\higor\Desktop\sistemaMercurio\sistemaMercurio\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\higor\Desktop\sistemaMercurio\sistemaMercurio\obj\Debug\sistemaMercurio.Controllers.frmConsultarUsuario.resources
 C:\Users\higor\Desktop\sistemaMercurio\sistemaMercurio\obj\Debug\sistemaMercurio.frmConsultaFuncionario.resources
+C:\PROJETO\sistemaMercurio\sistemaMercurio\obj\Debug\sistemaMercurio.Controllers.frmConsultarUsuario.resources
+C:\PROJETO\sistemaMercurio\sistemaMercurio\obj\Debug\sistemaMercurio.frmConsultaFuncionario.resources
+C:\PROJETO\sistemaMercurio\sistemaMercurio\obj\Debug\sistemaMercurio.frmFuncionario.resources

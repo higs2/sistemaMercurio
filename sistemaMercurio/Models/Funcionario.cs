@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace sistemaMercurio.Models
 {
-    internal class Funcionario
+    public class Funcionario
     {
         public int id_funcionario { get; set; }
         public string nome { get; set; }

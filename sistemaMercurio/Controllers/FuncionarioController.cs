@@ -92,5 +92,40 @@ namespace sistemaMercurio.Controllers
                 conexao.Close();
             }
         }
+
+        public bool editarFuncionario(Funcionario func)
+        {
+            try
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("UPDATE funcionario SET" +
+                                                    "nome=@nome," +
+                                                    "matricula=@matricula," +
+                                                    "departamento=@departamento," +
+                                                    "cargo=@cargo," +
+                                                    "salario=@salrio," +
+                                                    "status=@staus " +
+                                                    "WHERE id_funcionario=@id_funcionario",conexao);
+                cmd.Parameters.AddWithValue("id_funcionario", func.id_funcionario);
+                cmd.Parameters.AddWithValue("@nome", func.nome);
+                cmd.Parameters.AddWithValue("@matricula", func.matricula);
+                cmd.Parameters.AddWithValue("@departamento", func.departamento);
+                cmd.Parameters.AddWithValue("@cargo", func.cargo);
+                cmd.Parameters.AddWithValue("@salario", func.salario);
+                cmd.Parameters.AddWithValue("@status", func.status);
+                cmd.ExecuteNonQuery();
+                return true;
+
+            }
+            catch (Exception)
+            {
+
+                return false;
+            }
+            finally
+            {
+                conexao.Close();
+            }
+        }
     }
 }
