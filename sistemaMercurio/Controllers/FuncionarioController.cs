@@ -98,13 +98,13 @@ namespace sistemaMercurio.Controllers
             try
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("UPDATE funcionario SET" +
+                MySqlCommand cmd = new MySqlCommand("UPDATE funcionario SET " +
                                                     "nome=@nome," +
                                                     "matricula=@matricula," +
                                                     "departamento=@departamento," +
                                                     "cargo=@cargo," +
-                                                    "salario=@salrio," +
-                                                    "status=@staus " +
+                                                    "salario=@salario," +
+                                                    "status=@status " +
                                                     "WHERE id_funcionario=@id_funcionario",conexao);
                 cmd.Parameters.AddWithValue("id_funcionario", func.id_funcionario);
                 cmd.Parameters.AddWithValue("@nome", func.nome);
