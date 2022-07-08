@@ -95,6 +95,19 @@ namespace sistemaMercurio
         {
             frmFuncionario funcionario = new frmFuncionario(funcionarioSelecionado());
             funcionario.ShowDialog();
+            dgvFuncinario.BeginInvoke((MethodInvoker)delegate ()
+            {
+                txtPesquisar.Clear();
+                dgvFuncinario.DataSource = funcinarioController.exibirFuncionarios();
+                dgvFuncinario.Refresh();
+            });
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+            DataView dataView = (dgvFuncinario.DataSource as DataTable).DefaultView;
+            frmRelatorioFuncionario relatorioFuncionario = new frmRelatorioFuncionario(dataView);
+            relatorioFuncionario.ShowDialog();
         }
     }
 }

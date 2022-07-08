@@ -38,15 +38,18 @@ namespace sistemaMercurio
             this.cadastrToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuárioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionárioToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.usuarioLogado = new System.Windows.Forms.ToolStripStatusLabel();
-            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.funcionárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuárioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -57,6 +60,7 @@ namespace sistemaMercurio
             this.sistemasToolStripMenuItem,
             this.cadastrToolStripMenuItem,
             this.consultaToolStripMenuItem,
+            this.relatórioToolStripMenuItem,
             this.toolStripMenuItem1,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
@@ -77,26 +81,26 @@ namespace sistemaMercurio
             // calculadoraToolStripMenuItem
             // 
             this.calculadoraToolStripMenuItem.Name = "calculadoraToolStripMenuItem";
-            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.calculadoraToolStripMenuItem.Text = "Calculadora";
             // 
             // browserToolStripMenuItem
             // 
             this.browserToolStripMenuItem.Name = "browserToolStripMenuItem";
-            this.browserToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.browserToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.browserToolStripMenuItem.Text = "Browser";
             // 
             // geradorToolStripMenuItem
             // 
             this.geradorToolStripMenuItem.Name = "geradorToolStripMenuItem";
-            this.geradorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.geradorToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.geradorToolStripMenuItem.Text = "Gerador da Mega";
             this.geradorToolStripMenuItem.Click += new System.EventHandler(this.geradorToolStripMenuItem_Click);
             // 
             // calculadoraTesteeeToolStripMenuItem
             // 
             this.calculadoraTesteeeToolStripMenuItem.Name = "calculadoraTesteeeToolStripMenuItem";
-            this.calculadoraTesteeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.calculadoraTesteeeToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.calculadoraTesteeeToolStripMenuItem.Text = "Calculadora Teste";
             this.calculadoraTesteeeToolStripMenuItem.Click += new System.EventHandler(this.calculadoraTesteeeToolStripMenuItem_Click);
             // 
@@ -112,16 +116,39 @@ namespace sistemaMercurio
             // usuárioToolStripMenuItem
             // 
             this.usuárioToolStripMenuItem.Name = "usuárioToolStripMenuItem";
-            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuárioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.usuárioToolStripMenuItem.Text = "Usuário";
             this.usuárioToolStripMenuItem.Click += new System.EventHandler(this.usuárioToolStripMenuItem_Click);
             // 
             // funcionárioToolStripMenuItem
             // 
             this.funcionárioToolStripMenuItem.Name = "funcionárioToolStripMenuItem";
-            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionárioToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.funcionárioToolStripMenuItem.Text = "Funcionário";
             this.funcionárioToolStripMenuItem.Click += new System.EventHandler(this.funcionárioToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.funcionárioToolStripMenuItem1,
+            this.usuárioToolStripMenuItem1});
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            // 
+            // funcionárioToolStripMenuItem1
+            // 
+            this.funcionárioToolStripMenuItem1.Name = "funcionárioToolStripMenuItem1";
+            this.funcionárioToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.funcionárioToolStripMenuItem1.Text = "Funcionário";
+            this.funcionárioToolStripMenuItem1.Click += new System.EventHandler(this.funcionárioToolStripMenuItem1_Click);
+            // 
+            // usuárioToolStripMenuItem1
+            // 
+            this.usuárioToolStripMenuItem1.Name = "usuárioToolStripMenuItem1";
+            this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(137, 22);
+            this.usuárioToolStripMenuItem1.Text = "Usuário";
+            this.usuárioToolStripMenuItem1.Click += new System.EventHandler(this.usuárioToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -134,6 +161,28 @@ namespace sistemaMercurio
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // relatórioToolStripMenuItem
+            // 
+            this.relatórioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuárioToolStripMenuItem2,
+            this.funcionárioToolStripMenuItem2});
+            this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
+            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.relatórioToolStripMenuItem.Text = "Relatório";
+            // 
+            // usuárioToolStripMenuItem2
+            // 
+            this.usuárioToolStripMenuItem2.Name = "usuárioToolStripMenuItem2";
+            this.usuárioToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.usuárioToolStripMenuItem2.Text = "Usuário";
+            // 
+            // funcionárioToolStripMenuItem2
+            // 
+            this.funcionárioToolStripMenuItem2.Name = "funcionárioToolStripMenuItem2";
+            this.funcionárioToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.funcionárioToolStripMenuItem2.Text = "Funcionário";
+            this.funcionárioToolStripMenuItem2.Click += new System.EventHandler(this.funcionárioToolStripMenuItem2_Click);
             // 
             // menuStrip1
             // 
@@ -166,29 +215,6 @@ namespace sistemaMercurio
             // 
             this.usuarioLogado.Name = "usuarioLogado";
             this.usuarioLogado.Size = new System.Drawing.Size(0, 17);
-            // 
-            // consultaToolStripMenuItem
-            // 
-            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.funcionárioToolStripMenuItem1,
-            this.usuárioToolStripMenuItem1});
-            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultaToolStripMenuItem.Text = "Consulta";
-            // 
-            // funcionárioToolStripMenuItem1
-            // 
-            this.funcionárioToolStripMenuItem1.Name = "funcionárioToolStripMenuItem1";
-            this.funcionárioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.funcionárioToolStripMenuItem1.Text = "Funcionário";
-            this.funcionárioToolStripMenuItem1.Click += new System.EventHandler(this.funcionárioToolStripMenuItem1_Click);
-            // 
-            // usuárioToolStripMenuItem1
-            // 
-            this.usuárioToolStripMenuItem1.Name = "usuárioToolStripMenuItem1";
-            this.usuárioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.usuárioToolStripMenuItem1.Text = "Usuário";
-            this.usuárioToolStripMenuItem1.Click += new System.EventHandler(this.usuárioToolStripMenuItem1_Click);
             // 
             // frmMenu
             // 
@@ -237,5 +263,8 @@ namespace sistemaMercurio
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionárioToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuárioToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem funcionárioToolStripMenuItem2;
     }
 }

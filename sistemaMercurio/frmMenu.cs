@@ -79,5 +79,11 @@ namespace sistemaMercurio
             frmConsultarUsuario consultaUsuario = new frmConsultarUsuario();
             consultaUsuario.ShowDialog();
         }
+
+        private void funcionárioToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmRelatorioFuncionario relatorioFuncionario = new frmRelatorioFuncionario();
+            relatorioFuncionario.ShowDialog();
+        }
     }
 }

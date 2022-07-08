@@ -18,7 +18,7 @@ namespace sistemaMercurio
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
-            //Application.Run(new frmConsultarUsuario());
+            //Application.Run(new frmRelatorioFuncionario());
         }
     }
 }
